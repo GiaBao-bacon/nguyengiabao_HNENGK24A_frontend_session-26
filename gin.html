@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array= [];
+      for (let i = 0; i < 10; i++) {
+        let a = +prompt(`Mời nhập số nguyên thứ${i + 1}`);
+        if (isNaN(a)) {
+          alert("Giá trị không hợp lệ rồi");
+        } else {
+          array.push(a);
+        }
+      }
+      function check(array) {
+        if (array.length == 0) {
+          return "Mảng không có phần tử nào";
+        }
+        return array> 10;
+      }
+      const bigNum = array.filter(check);
+      alert(`[${bigNum}]`);
+    </script>
+  </body>
+</html>
