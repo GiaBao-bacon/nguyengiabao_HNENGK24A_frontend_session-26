@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array1 = [
+        "hello123@gmail.net",
+        "abc.doe@gmail.com",
+        "abc def@gmail.net",
+        "abc.gmail.com",
+      ];
+      const array2 = [];
+      const text = "abc";
+      const resultArray = (array) => {
+        if (array.length === 0) {
+          console.log("Mảng không có phần tử nào");
+          return;
+        }
+        if (!Array.isArray(array)) {
+          console.log("Dữ liệu không hợp lệ");
+          return;
+        }
+        const result = array.filter(
+          (value) => value.includes("@") && !value.includes(" ")
+        );
+        console.log(result);
+      };
+      resultArray(array1);
+      resultArray(array2);
+      resultArray(text);
+    </script>
+  </body>
+</html>
