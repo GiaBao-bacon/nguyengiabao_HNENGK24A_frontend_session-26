@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const findMaxAndPosition = (array) => {
+        if (!Array.isArray(array)) {
+          console.log("Dữ liệu không hợp lệ");
+          return;
+        }
+
+        if (array.length === 0) {
+          console.log("Mảng ko có dữ liệu");
+          return;
+        }
+
+        const max = Math.max(...array);
+        const position = array.indexOf(max);
+
+        console.log("max =", max);
+        console.log("position:", position);
+      };
+
+      findMaxAndPosition([10, 9, 5, 11, 24, 5]);
+      findMaxAndPosition([]);
+      findMaxAndPosition("abc");
+    </script>
+  </body>
+</html>
